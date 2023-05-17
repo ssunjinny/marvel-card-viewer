@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
 interface ITextHeadingProps {
   centered?: boolean;
@@ -10,8 +10,8 @@ interface ITextHeadingProps {
 export default function TextHeading({ centered, children }: ITextHeadingProps) {
   return (
     <div
-      className={clsx("text-6xl font-bold", {
-        centered: "text-center",
+      className={clsx('text-6xl font-bold', {
+        'text-center': centered,
       })}
     >
       {children}
