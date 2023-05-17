@@ -4,7 +4,7 @@ import { ITransformedCard } from '../Types/ITransformedCard';
 export default function transformCards(cards: ICard[]): ITransformedCard[] {
   return cards.map((card) => {
     return {
-      imagesrc: card.imagesrc,
+      imagesrc: `https://marvelcdb.com${card.imagesrc}`,
     };
   });
 }

@@ -9,14 +9,13 @@ interface ICardsGridProps {
 
 function CardsGrid({ cards }: ICardsGridProps) {
   return (
-    <div className="grid gap-4 grid-cols-4">
+    <div className="grid gap-4 grid-cols-1 lg:grid-cols-4">
       {cards.map(({ imagesrc }) => {
-        const src = `https://marvelcdb.com${imagesrc}`;
         return (
           <Image
             alt={imagesrc}
             key={imagesrc}
-            src={src}
+            src={imagesrc}
             width={300}
             height={420}
           />
