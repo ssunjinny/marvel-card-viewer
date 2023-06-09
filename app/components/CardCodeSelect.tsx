@@ -3,8 +3,6 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-import { Listbox } from '@headlessui/react';
-
 import CARD_SETS from './constants/CARD_SETS';
 import { ICardSet } from '../Types/ICardSet';
 
@@ -23,18 +21,7 @@ function CardCodeSelect({ code }: ICardCodeSelectProps) {
     router.push(`/${code}`);
   };
 
-  return (
-    <Listbox value={code} onChange={handleCodeChange}>
-      <Listbox.Button>{currentCard?.name}</Listbox.Button>
-      <Listbox.Options>
-        {CARD_SETS.map((set: ICardSet) => (
-          <Listbox.Option key={set.id} value={set.code}>
-            {set.name}
-          </Listbox.Option>
-        ))}
-      </Listbox.Options>
-    </Listbox>
-  );
+  return <div>Yay</div>;
 }
 
 export default CardCodeSelect;
