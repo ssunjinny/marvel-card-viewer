@@ -22,7 +22,7 @@ export default function RootLayout({ children, params }: IRootLayoutProps) {
         <header>
           <div className="mt-6 lg:mt-12">
             <TextHeading centered>Marvel Card Viewer</TextHeading>
-            <div className="flex justify-center mt-3">
+            <div className="flex justify-center mt-4">
               <CardCodeSelect code={params.code} />
             </div>
           </div>

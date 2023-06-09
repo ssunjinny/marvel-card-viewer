@@ -13,10 +13,6 @@ interface ICardCodeSelectProps {
 function CardCodeSelect({ code }: ICardCodeSelectProps) {
   const router = useRouter();
 
-  const currentCard = !!code
-    ? CARD_SETS.find((set: ICardSet) => set.code === code)
-    : CARD_SETS[0];
-
   const handleCodeChange = (code: string) => {
     router.push(`/${code}`);
   };
