@@ -1,4 +1,4 @@
-const CARD_CODES = [
+const CARD_SETS = [
   {
     name: 'Core Set',
     code: 'core',
@@ -401,4 +401,4 @@ const CARD_CODES = [
   },
 ];
 
-export default CARD_CODES;
+export default CARD_SETS;
