@@ -21,7 +21,18 @@ function CardCodeSelect({ code }: ICardCodeSelectProps) {
     router.push(`/${code}`);
   };
 
-  return <div>Yay</div>;
+  return (
+    <select
+      onChange={(e) => handleCodeChange(e.target.value)}
+      className="select select-bordered w-full max-w-xs"
+    >
+      {CARD_SETS.map((set: ICardSet) => (
+        <option key={set.code} value={set.code}>
+          {set.name}
+        </option>
+      ))}
+    </select>
+  );
 }
 
 export default CardCodeSelect;
