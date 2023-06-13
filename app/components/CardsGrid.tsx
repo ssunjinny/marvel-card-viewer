@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import { ITransformedCard } from '../Types/ITransformedCard';
+import FloatingButton from './FloatingButton';
 
 interface ICardsGridProps {
   cards: ITransformedCard[];
@@ -9,7 +10,7 @@ interface ICardsGridProps {
 
 function CardsGrid({ cards }: ICardsGridProps) {
   return (
-    <div className="grid gap-4 grid-cols-1 lg:grid-cols-4">
+    <div className="relative grid gap-4 grid-cols-1 lg:grid-cols-4">
       {cards.map(({ imagesrc }) => {
         return (
           <Image
@@ -21,6 +22,7 @@ function CardsGrid({ cards }: ICardsGridProps) {
           />
         );
       })}
+      <FloatingButton />
     </div>
   );
 }
