@@ -10,7 +10,7 @@ interface ITextHeadingProps {
 export default function TextHeading({ centered, children }: ITextHeadingProps) {
   return (
     <div
-      className={clsx('text-6xl font-bold', {
+      className={clsx('text-6xl font-semibold', {
         'text-center': centered,
       })}
     >

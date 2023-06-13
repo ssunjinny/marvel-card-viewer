@@ -1,5 +1,7 @@
 import './globals.css';
 
+import { Outfit } from 'next/font/google';
+
 import TextHeading from './components/Typography/TextHeading';
 import CardCodeSelect from './components/CardCodeSelect';
 
@@ -15,9 +17,14 @@ interface IRootLayoutProps {
   };
 }
 
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export default function RootLayout({ children, params }: IRootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className={outfit.className}>
       <body>
         <header>
           <div className="mt-6 lg:mt-12">
