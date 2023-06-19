@@ -12,9 +12,6 @@ export const metadata = {
 
 interface IRootLayoutProps {
   children: React.ReactNode;
-  params: {
-    code: string;
-  };
 }
 
 const outfit = Outfit({
@@ -22,7 +19,7 @@ const outfit = Outfit({
   display: 'swap',
 });
 
-export default function RootLayout({ children, params }: IRootLayoutProps) {
+export default function RootLayout({ children }: IRootLayoutProps) {
   return (
     <html lang="en" className={outfit.className}>
       <body>
@@ -30,7 +27,7 @@ export default function RootLayout({ children, params }: IRootLayoutProps) {
           <div className="mt-6 lg:mt-12">
             <TextHeading centered>Marvel Card Viewer</TextHeading>
             <div className="flex justify-center mt-4">
-              <CardCodeSelect code={params.code} />
+              <CardCodeSelect />
             </div>
           </div>
         </header>
